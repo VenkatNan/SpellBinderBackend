@@ -1,0 +1,16 @@
+[
+    {
+       "name": "Anasi",
+        "splLvl": "1",
+       "class": "Wizard",
+        "spells":["Fire-ball"],
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoISGAbNiIu8jcawk1MOEtDDvhbVDGdbRJWA&usqp=CAU"
+    },
+    {
+        "name": "Renka",
+         "splLvl": "1",
+        "class": "Wizard",
+         "spells":["sheild","sleep"],
+         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOnrThCbfejepwqukBQJltIF7X7PSazAHNpQ&usqp=CAU"
+     }
+]
