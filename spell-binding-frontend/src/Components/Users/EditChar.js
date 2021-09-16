@@ -2,6 +2,7 @@ import React from "react";
 import { useState} from "react";
 import axios from "axios";
 import {useHistory} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const EditChar = ({characters, match, setCharData}) => {
     let id = match.params.id;
@@ -38,7 +39,7 @@ const EditChar = ({characters, match, setCharData}) => {
 }
 
     return (
-        <div>
+        <div class='editChar'>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input id='name' placeholder='Character Name' type="text" onChange={handleChange} value={editChar.name}/>

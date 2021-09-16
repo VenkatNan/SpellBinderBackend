@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const SpecificCharacter = ({characters,match}) => {
 
@@ -7,7 +8,7 @@ const SpecificCharacter = ({characters,match}) => {
 
     console.log(charDetail);
     return (
-        <div>
+        <div class='specificChar'>
             <h1>{charDetail.name}</h1>
             <img src={charDetail.img} alt='fantasy character'/>
             <h4>Class: {charDetail.class}</h4>

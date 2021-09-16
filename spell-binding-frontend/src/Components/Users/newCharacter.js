@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 import axios from 'axios'
 import {useHistory} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const NewCharacter = () => {
 
@@ -29,7 +30,7 @@ const NewCharacter = () => {
     }
 
     return (
-        <div>
+        <div class='newChar'>
             <h1>New Character</h1>
             <div>
                 <form onSubmit={handleSubmit}>

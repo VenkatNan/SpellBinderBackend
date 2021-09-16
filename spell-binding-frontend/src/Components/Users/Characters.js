@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import axios from "axios";
-// import { useState} from "react";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Characters = (props) => {
 
 
     return (
         
-        <div>
+        <div class='characterCard'>
             <h1>Characters</h1>
             <section>
             {props.character.map((char) => (
