@@ -6,7 +6,7 @@ import axios from 'axios'
 import Character from './Components/Users/Characters'
 import SpecificCharacter from './Components/Users/specificCharacter'
 import NewChar from './Components/Users/newCharacter'
-import EditChar from './Components/Users/editCharacter'
+import EditChar from './Components/Users/EditChar'
 
 
 
@@ -37,11 +37,11 @@ function App() {
       }/>
 
 
-      <Route exact path="/users/details/:id" render={routerProps => <SpecificCharacter match={routerProps.match} characters={charData} setNewChar={setCharData}/>}/>
+      <Route exact path="/users/details/:name" render={routerProps => <SpecificCharacter match={routerProps.match} characters={charData} setNewChar={setCharData}/>}/>
 
       <Route exact path="/users/new" render={() => <NewChar characters={charData} />}/>
 
-      <Route exact path="/plants/edit/:id" render={routerProps => <EditChar match={routerProps.match} characters={charData} setCharData={setCharData} />}/>
+      <Route exact path="/users/edit/:id" render={routerProps => <EditChar match={routerProps.match} characters={charData} setCharData={setCharData} />}/>
 
     </div>
   );

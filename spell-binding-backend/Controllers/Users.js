@@ -45,19 +45,19 @@ router.delete('/delete/:id', (req, res, next) => {
     .catch(next)
 })
 
-// router.put('/edit/:id', (req,res, next) =>{
-//     const id = req.params.id;
-//     console.log(id,req.body)
-//     User.findOneAndUpdate(
-//         { _id: id },
-//         req.body,
-//         {new:true}
-//     )
-//           .then(char =>{
-//               User.find()
-//               .then(characters =>{ res.json({char,characters}) })
-//           })
-//           .catch(next)
-// })
+router.put('/edit/:id', (req,res, next) =>{
+    const id = req.params.id;
+    console.log(id,req.body)
+    User.findOneAndUpdate(
+        { _id: id },
+        req.body,
+        {new:true}
+    )
+          .then(char =>{
+              User.find()
+              .then(characters =>{ res.json({char,characters}) })
+          })
+          .catch(next)
+})
 
 module.exports = router; 

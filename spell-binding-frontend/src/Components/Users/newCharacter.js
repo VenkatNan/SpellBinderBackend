@@ -1,6 +1,7 @@
 import React from 'react'
 import {useState} from 'react'
 import axios from 'axios'
+import {useHistory} from 'react-router-dom'
 
 const NewCharacter = () => {
 
@@ -12,7 +13,7 @@ const NewCharacter = () => {
     }
 
     const [character, setChar] = useState(initialState)
-
+    let history = useHistory()
     const handleChange = (event) => {
         setChar({...character,[event.target.id]: event.target.value})
     }
@@ -22,7 +23,9 @@ const NewCharacter = () => {
         axios.post(`http://localhost:4000/users/new`)
         .then(res => {
           setChar(res.data)
+          
         })
+        history.push('/')
     }
 
     return (
